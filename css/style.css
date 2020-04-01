@@ -38,3 +38,21 @@ html, body{
     right: 20px;
     z-index: 2;
 }
+/*canvas {
+    z-index: 100;
+    /*display: none
+}*/
+
+.higher-btn {
+    position: absolute;
+    z-index: 200
+}
+.cls{
+    position: absolute;
+    z-index: 100
+}
+.cls-less {
+    position: absolute;
+    z-index: -100
+}
+

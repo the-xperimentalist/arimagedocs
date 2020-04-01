@@ -4,8 +4,11 @@ const form = document.querySelector("form")
 form.addEventListener("submit", e => {
   e.preventDefault()
 
-  const im = document.querySelector("#img").file
-  const m3d = document.querySelector("#3d").file
+  const im = document.querySelector("#img").files[0]
+  const m3d = document.querySelector("#m3d").files[0]
+
+  console.log(im)
+  console.log(document.querySelector("#img"))
 
   const formData = new FormData()
   formData.append("temp_img", im)
