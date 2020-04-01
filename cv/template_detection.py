@@ -2,15 +2,14 @@ import cv2
 import numpy as np
 
 class TemplateDetection:
-    def __init__(self, img_url):
-        self.img_url = img_url
+    def __init__(self):
+        # self.img_url = img_url
         self.templates = self.get_templates()
         self.threshold = 0.75
         self.temp_match_algo = cv2.TM_CCOEFF_NORMED
-        pass
 
-    def detect(self):
-        to_detect_img = cv2.imread(self.img_url)
+    def detect(self, img):
+        to_detect_img = cv2.imread(img)
         img_gray = cv2.cvtColor(to_detect_img, cv2.COLOR_BGR2GRAY)
 
         for template in self.templates:
