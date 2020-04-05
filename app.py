@@ -10,9 +10,9 @@ import logging
 from flask import request
 from flask_api import FlaskAPI, status
 from flask_cors import CORS
-from file_helpers import FileHelpers
-from cv.image_duplicates import ResizeImage
-from cv.template_detection import TemplateDetection
+from functional.file_helpers import FileHelpers
+from functional.cv.image_duplicates import ResizeImage
+from functional.cv.template_detection import TemplateDetection
 from PIL import Image
 
 app = FlaskAPI(__name__)
