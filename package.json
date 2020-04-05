@@ -18,6 +18,8 @@
   "homepage": "https://github.com/prasoonmayank/arimagedocs#readme",
   "description": "",
   "dependencies": {
-    "reefjs": "^4.1.12"
+    "asbundle": "^2.6.1",
+    "reefjs": "^4.1.12",
+    "three": "^0.115.0"
   }
 }
