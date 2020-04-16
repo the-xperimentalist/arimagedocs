@@ -1,10 +1,28 @@
+import { Scene, PerspectiveCamera, WebGLRenderer } from 'three'
 
-function component () {
-  const elem = document.createElement('div');
+const scene = new Scene()
+const camera = new PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10)
+camera.position.z = 1
 
-  elem.innerHTML = "Hello"
+geometry = new BoxGeometry( 0.2, 0.2, 0.2 )
+material = new MeshNormalMaterial()
 
-  return elem
+mesh = new THREE.Mesh( geometry, material )
+const basic = basicScene()
+scene.add( mesh )
+
+const renderer = new WebGLRenderer({antialias: true})
+renderer.setSize( window.innerWidth, window.innerHeight )
+
+document.body.appendChild( renderer.domElement )
+
+function animate() {
+  requestAnimationFrame(animate)
+
+  mesh.rotation.x += 0.01
+  mesh.rotation.y += 0.01
+
+  renderer.render( scene, camera )
 }
 
-document.body.appendChild(component())
+animate()
